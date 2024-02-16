@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="507.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laborator.HomeContoller">
+   <children>
+       <Label fx:id="messageToUser" text="Pagina Principala" />
+      <TableView fx:id="tableViewPrieteni" layoutX="34.0" layoutY="54.0" prefHeight="200.0" prefWidth="247.0">
+        <columns>
+          <TableColumn fx:id="prietenColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="prietenColumnFirstName" prefWidth="75.0" text="Nume" />
+            <TableColumn fx:id="prietenColumnLastName" prefWidth="74.40001831054687" text="Prenume" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="tableViewNe_Prieteni" layoutX="317.0" layoutY="54.0" prefHeight="200.0" prefWidth="247.0">
+        <columns>
+          <TableColumn fx:id="ne_prietenColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="ne_prietenColumnFirstName" prefWidth="75.0" text="Nume" />
+            <TableColumn fx:id="ne_prietenColumnLastName" prefWidth="75.0" text="Prenume" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+
+      <Label layoutX="34.0" layoutY="18.0" prefHeight="42.0" prefWidth="216.0" text="Prietenii tai:" textOverrun="CLIP">
+       <font>
+           <Font size="20.0" />
+       </font></Label>
+
+      <Label layoutX="333.0" layoutY="18.0" prefHeight="42.0" prefWidth="216.0" text="Toti utilizatorii:" textOverrun="CLIP">
+       <font>
+           <Font size="20.0" />
+       </font></Label>
+      <Button fx:id="buttonMessages" layoutX="54.0" layoutY="327.0" mnemonicParsing="false" onAction="#handle_Messages" prefHeight="60.0" prefWidth="148.0" text="Trimite un mesaj" />
+      <Button fx:id="buttonFriendRequest" layoutX="229.0" layoutY="327.0" mnemonicParsing="false" onAction="#handle_friendRequests" prefHeight="60.0" prefWidth="158.0" text="Cereri de Prietenie" />
+      <Button fx:id="buttonSendFriendRequest" layoutX="413.0" layoutY="327.0" mnemonicParsing="false" onAction="#handle_sendFriendRequests" prefHeight="60.0" prefWidth="179.0" text="Trimite o cerere de prietenie" />
+      <ButtonBar layoutX="308.0" layoutY="254.0" prefHeight="40.0" prefWidth="264.0">
+        <buttons>
+            <Button fx:id="previousButton" mnemonicParsing="false" onAction="#goToPreviousPageUtilizatori" text="Inapoi Utilizatori" />
+          <Button fx:id="nextButton" mnemonicParsing="false" onAction="#goToNextPageUtilizatori" text="Inainte Utilizatori" />
+        </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="51.0" layoutY="254.0" prefHeight="40.0" prefWidth="228.0">
+         <buttons>
+          <Button fx:id="previousButton1" mnemonicParsing="false" onAction="#goToPreviousPagePrieteni" text="Inapoi Prieteni" />
+            <Button fx:id="nextButton1" mnemonicParsing="false" onAction="#goToNextPagePrieteni" text="Inainte Prieteni" />
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="54.0" layoutY="426.0" prefHeight="42.0" prefWidth="247.0" text="Numarul de elemente pe pagina:" />
+      <TextField fx:id="nrElem" layoutX="268.0" layoutY="426.0" prefHeight="42.0" prefWidth="80.0" />
+
+   </children>
+</AnchorPane>
